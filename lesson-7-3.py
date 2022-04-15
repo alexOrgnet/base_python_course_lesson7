@@ -19,7 +19,7 @@ class Cell:
         self.number_cells = int(number_cells)
 
     def __add__(self, other):
-        return f'Внимание происходит эмбриогенез двух клеток ! Размер клетки равен: {self.number_cells + other.number_cells}'
+        return f'Внимание, происходит эмбриогенез двух клеток ! Размер клетки равен: {self.number_cells + other.number_cells}'
 
     def __sub__(self, other):
         new_number = self.number_cells - other.number_cells
@@ -42,10 +42,10 @@ class Cell:
         return result
 
 
-cell = Cell(12)
-cell2 = Cell(26)
-print(cell + cell2)
-print(cell - cell2)
-print(cell / cell2)
-print(cell * cell2)
-print(cell.make_order(3))
+cells = Cell(12)
+cells2 = Cell(26)
+print(cells + cells2)
+print(cells - cells2)
+print(cells / cells2)
+print(cells * cells2)
+print(cells.make_order(3))
