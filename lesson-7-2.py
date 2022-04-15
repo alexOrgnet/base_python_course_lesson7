@@ -25,19 +25,21 @@ class Clothes(ABC):
 
 
 class Coat(Clothes):
+    @property
     def consumption(self):
         return f'Для изготовления пальто необходимо : {self.base_param / 6.5 + 0.5 :.2f} ткани'
 
     def abstract(self):
-        return 'Abstract method for coats'
+        return 'Абстрактный метод для пальто'
 
 
 class Costume(Clothes):
+
     def consumption(self):
         return f'Для изготовления костюма необходимо : {2 * self.base_param + 0.3 :.2f} ткани'
 
     def abstract(self):
-        return 'Abstract method for costumes'
+        return 'Абстрактный метод для костюмов'
 
 
 coat = Coat(400)
